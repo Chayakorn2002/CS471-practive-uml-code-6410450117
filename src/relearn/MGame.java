@@ -8,9 +8,10 @@ public class MGame {
     private Die[] dice;
     private ArrayList<Player> players;
     private Board board;
+    private Piece[] pieces;
 
-    public void playGame(int N, Player[] players) {
-        while (this.roundCnt < N) {
+    public void playGame(int n, Player[] players) {
+        while (this.roundCnt < n) {
             this.playRound();
             for (int i = 0; i < players.length; i++) {
                 players[i].takeTurn(this.dice);

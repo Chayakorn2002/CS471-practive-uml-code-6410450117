@@ -8,6 +8,13 @@ public class Player {
     private Board board;
     private List<Die> dice;
 
+    public Player(String name, Piece piece, Board board, List<Die> dice) {
+        this.name = name;
+        this.piece = piece;
+        this.board = board;
+        this.dice = dice;
+    }
+
     public void takeTurn(Die[] dice) {
         int fv = 0;
         for (int i = 0; i < dice.length; i++) {
